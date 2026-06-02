@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>АВТОРУСЬ TANK — Официальный дилер</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/svg" href="img/logo.445e7b59 1.svg">
+  <style>
+    @keyframes slideImage1 {
+      0%, 100% { opacity: 1; }
+      33%, 66% { opacity: 0; }
+    }
+    @keyframes slideImage2 {
+      0%, 33% { opacity: 0; }
+      50%, 83% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes slideImage3 {
+      0%, 66% { opacity: 0; }
+      83%, 100% { opacity: 1; }
+    }
+    .hero-image:nth-child(1) {
+      animation: slideImage1 12s infinite;
+    }
+    .hero-image:nth-child(2) {
+      animation: slideImage2 12s infinite;
+    }
+    .hero-image:nth-child(3) {
+      animation: slideImage3 12s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#181818] text-white">
+
+<!-- ===================== HEADER ===================== -->
+<header class="bg-[#181818] border-b border-[#2a2a2a] sticky top-0 z-50">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-3 flex items-center justify-between gap-4">
+
+    <!-- Logo + Brand -->
+    <div class="flex items-center gap-3 shrink-0">
+      <img src="./img/logo.445e7b59%201.svg" alt="Tank Logo" class="h-10 w-auto" />
+      <div class="leading-tight">
+        <div class="text-white font-bold text-sm tracking-widest">АВТОРУСЬ TANK</div>
+        <div class="text-[#888] text-[10px] tracking-wide">Официальный дилер</div>
+    </div>
+
+    <!-- Address (desktop only) -->
+    <div class="hidden lg:flex items-center gap-2 text-[11px] text-[#aaa]">
+      <svg class="w-4 h-4 text-[#FF9549] shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+      <span>Ярославское шоссе, владение 2Б, строение 5 (МКАД, 95 км)</span>
+    </div>
+
+    <!-- Links (desktop) -->
+    <div class="hidden md:flex items-center gap-6 text-[12px] text-[#ccc]">
+      <a href="#" class="hover:text-[#FF9549] transition-colors flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l5.654-4.654m5.598-2.73 1.522-1.522a3.375 3.375 0 0 0-4.773-4.773L12.17 5.9"/></svg>
+        Записаться на сервис
+      </a>
+      <a href="#" class="hover:text-[#FF9549] transition-colors flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+        Тест-драйв
+      </a>
+    </div>
+
+    <!-- Phone + CTA -->
+    <div class="flex items-center gap-3 shrink-0">
+      <a href="tel:+79999999999" class="text-sm md:text-base text-white font-bold tracking-wide hover:text-[#FF9549] transition-colors">
+        +7 (999) 999-99-99
+      </a>
+      <a href="#" class="bg-[#FF9549] hover:bg-[#e07a30] text-black font-bold text-[11px] md:text-xs px-3 md:px-4 py-2 rounded transition-colors whitespace-nowrap">
+        Заказать звонок
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO SECTION ===================== -->
+<section class="relative overflow-hidden bg-[#141414] min-h-[320px] md:min-h-[520px]">
+  <!-- Hero Carousel Images -->
+  <div class="hero-carousel relative w-full min-h-[320px] md:min-h-[520px]">
+    <img src="img/image 285.png" alt="Tank 300 и Tank 500" class="hero-image absolute inset-0 w-full h-full object-cover object-center" />
+    <img src="img/image 285 (1).png" alt="Tank автомобиль" class="hero-image absolute inset-0 w-full h-full object-cover object-center" />
+    <img src="img/image 286.png" alt="Tank дизайн" class="hero-image absolute inset-0 w-full h-full object-cover object-center" />
+  </div>
+
+  <!-- Overlay gradient left side -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+  <!-- Hero text overlay -->
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 w-full">
+      <div class="hero-text max-w-xs md:max-w-sm pt-8 md:pt-0">
+        <p class="text-[#ccc] text-[11px] md:text-sm mb-1 uppercase tracking-widest">Улучшим любые условия</p>
+        <h1 class="font-heading text-[2.2rem] md:text-[3.5rem] lg:text-[5rem] leading-none text-white tracking-wide">TANK 500</h1>
+        <p class="text-[#ccc] text-sm md:text-base mb-5">Осталось всего 5 автомобилей!</p>
+        <a href="#" class="inline-flex items-center gap-2 bg-[#FF9549] hover:bg-[#e07a30] text-black font-bold text-sm px-6 py-3 rounded transition-colors">
+          Получить предложение
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ===================== COUNTDOWN BANNER ===================== -->
+<section class="bg-[#1e1e1e] border-y border-[#2a2a2a]">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+
+    <!-- Label -->
+    <div class="text-sm font-bold text-white uppercase tracking-widest whitespace-nowrap">
+      СРОК ДЕЙСТВИЯ<br class="hidden md:block" /> СПЕЦПРЕДЛОЖЕНИЯ:
+    </div>
+
+    <!-- Countdown -->
+    <div class="flex items-center gap-2" id="countdown">
+      <div class="countdown-box">
+        <div class="text-xl font-bold text-white" id="cd-days">3</div>
+        <div class="text-[9px] text-[#888] uppercase">дней</div>
+      </div>
+      <span class="text-[#FF9549] font-bold text-xl">:</span>
+      <div class="countdown-box">
+        <div class="text-xl font-bold text-white" id="cd-hours">06</div>
+        <div class="text-[9px] text-[#888] uppercase">часов</div>
+      </div>
+      <span class="text-[#FF9549] font-bold text-xl">:</span>
+      <div class="countdown-box">
+        <div class="text-xl font-bold text-white" id="cd-mins">14</div>
+        <div class="text-[9px] text-[#888] uppercase">минут</div>
+      </div>
+      <span class="text-[#FF9549] font-bold text-xl">:</span>
+      <div class="countdown-box">
+        <div class="text-xl font-bold text-white" id="cd-secs">55</div>
+        <div class="text-[9px] text-[#888] uppercase">секунд</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <a href="#" class="bg-[#FF9549] hover:bg-[#e07a30] text-black font-bold text-sm px-6 py-3 rounded transition-colors flex items-center gap-2 whitespace-nowrap">
+      Узнать цену с выгодой
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== BENEFITS ROW ===================== -->
+<section class="bg-[#181818] border-b border-[#2a2a2a]">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#2a2a2a] gap-0">
+
+    <!-- Benefit 1 -->
+    <div class="flex items-start gap-4 py-4 md:py-0 md:px-6 first:pl-0">
+      <div class="shrink-0 mt-0.5">
+        <!-- certificate icon -->
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.25 15L13.6278 16.9023C14.0457 17.2366 14.6527 17.1826 15.0051 16.7799L18.75 12.5" stroke="#FF9549" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.3754 3.22202L6.12762 6.44328C4.682 7.08578 3.7347 8.52563 3.80439 10.1061C4.17504 18.5117 6.50922 21.9492 12.929 26.1866C14.1834 27.0145 15.818 27.0164 17.0719 26.1877C23.5189 21.9275 25.7594 18.4324 26.1771 10.1269C26.2571 8.53592 25.3083 7.08145 23.8526 6.43447L16.6246 3.22202C15.5903 2.76235 14.4097 2.76235 13.3754 3.22202Z" stroke="#FF9549" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-sm text-white mb-1">ОФИЦИАЛЬНЫЙ ДИЛЕР</div>
+        <div class="text-[#888] text-[11px] leading-relaxed">Гарантия высокого качества обслуживания.</div>
+      </div>
+    </div>
+
+    <!-- Benefit 2 -->
+    <div class="flex items-start gap-4 py-4 md:py-0 md:px-6">
+      <div class="shrink-0 mt-0.5">
+        <!-- speedometer icon -->
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.18 20C23.17 18.58 23.75 16.86 23.75 15C23.75 13.86 23.68 12.73 23.55 11.62M7.82 20C6.83 18.58 6.25 16.86 6.25 15C6.25 10.17 10.17 6.25 15 6.25C15.53 6.25 16.04 6.3 16.55 6.38M20.62 9.37L15 15M27.5 15C27.5 21.9 21.9 27.5 15 27.5C8.1 27.5 2.5 21.9 2.5 15C2.5 8.1 8.1 2.5 15 2.5C21.9 2.5 27.5 8.1 27.5 15ZM16.25 15C16.25 15.69 15.69 16.25 15 16.25C14.31 16.25 13.75 15.69 13.75 15C13.75 14.31 14.31 13.75 15 13.75C15.69 13.75 16.25 14.31 16.25 15Z" stroke="#FF9549" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-sm text-white mb-1">ПОКУПКА АВТО ЗА 1 ДЕНЬ</div>
+        <div class="text-[#888] text-[11px] leading-relaxed">Удобный процесс покупки, включая оформление всех документов.</div>
+      </div>
+    </div>
+
+    <!-- Benefit 3 -->
+    <div class="flex items-start gap-4 py-4 md:py-0 md:px-6">
+      <div class="shrink-0 mt-0.5">
+        <!-- sale icon -->
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 11.25C12.5 11.94 11.94 12.5 11.25 12.5C10.56 12.5 10 11.94 10 11.25C10 10.56 10.56 10 11.25 10C11.94 10 12.5 10.56 12.5 11.25Z" fill="#FF9549"/>
+          <path d="M20 18.75C20 19.44 19.44 20 18.75 20C18.06 20 17.5 19.44 17.5 18.75C17.5 18.06 18.06 17.5 18.75 17.5C19.44 17.5 20 18.06 20 18.75Z" fill="#FF9549"/>
+          <path d="M12.5677 3.32282C13.9693 2.1284 16.0307 2.1284 17.4323 3.32282L18.2856 4.04997C18.8862 4.56181 19.633 4.87114 20.4196 4.93391L21.5371 5.02309C23.3728 5.16957 24.8305 6.62724 24.977 8.4629L25.0661 9.58042C25.1289 10.367 25.4382 11.1138 25.9501 11.7144L26.6772 12.5677C27.8716 13.9693 27.8716 16.0307 26.6772 17.4323L25.9501 18.2856C25.4382 18.8862 25.1289 19.633 25.0661 20.4196L24.977 21.5371C24.8305 23.3728 23.3728 24.8305 21.5371 24.977L20.4196 25.0661C19.633 25.1289 18.8862 25.4382 18.2856 25.9501L17.4323 26.6772C16.0307 27.8716 13.9693 27.8716 12.5677 26.6772L11.7144 25.9501C11.1138 25.4382 10.367 25.1289 9.58042 25.0661L8.4629 24.977C6.62724 24.8305 5.16957 23.3728 5.02309 21.5371L4.93391 20.4196C4.87113 19.633 4.56181 18.8862 4.04997 18.2856L3.32282 17.4323C2.1284 16.0307 2.1284 13.9693 3.32282 12.5677L4.04997 11.7144C4.56181 11.1138 4.87113 10.367 4.93391 9.58043L5.02309 8.4629C5.16957 6.62724 6.62724 5.16957 8.4629 5.02309L9.58042 4.93391C10.367 4.87114 11.1138 4.56181 11.7144 4.04997L12.5677 3.32282Z" stroke="#FF9549" stroke-width="1.5"/>
+          <path d="M11.25 18.75L18.75 11.25" stroke="#FF9549" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-sm text-white mb-1">ВСЕ КОМПЛЕКТАЦИИ В НАЛИЧИИ</div>
+        <div class="text-[#888] text-[11px] leading-relaxed">Широкий выбор комплектаций, с полным пакетом документов.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESERVE PROMO BANNER ===================== -->
+<section class="bg-[#1e1e1e] py-8 md:py-12 border-b border-[#2a2a2a]">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 text-center">
+    <h2 class="font-heading text-2xl md:text-4xl text-white tracking-wide mb-2">
+      ЗАБРОНИРУЙТЕ АВТОМОБИЛЬ СЕГОДНЯ И ПОЛУЧИТЕ<br class="hidden md:block" />
+      ДОПОЛНИТЕЛЬНУЮ ВЫГОДУ 100 000 ₽
+    </h2>
+    <!-- Car selector cards -->
+    <div class="flex justify-center gap-6 md:gap-10 mt-8">
+
+      <!-- Tank 300 card -->
+      <div class="flex flex-col items-center gap-2 cursor-pointer group">
+        <div class="bg-[#252525] rounded-xl p-3 border border-[#333] group-hover:border-[#FF9549] transition-colors">
+          <img src="./img/Frame%206170.svg" alt="Tank 300" class="h-20 md:h-24 w-auto object-contain" />
+        </div>
+        <span class="text-white text-xs font-semibold tracking-widest">TANK 300</span>
+      </div>
+
+      <!-- Tank 500 card -->
+      <div class="flex flex-col items-center gap-2 cursor-pointer group">
+        <div class="bg-[#252525] rounded-xl p-3 border border-[#333] group-hover:border-[#FF9549] transition-colors">
+          <img src="./img/image 286.svg" alt="Tank 500" class="h-20 md:h-24 w-auto object-contain" />
+        </div>
+        <span class="text-[#FF9549] text-xs font-semibold tracking-widest">TANK 500</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TANK 300 PRODUCT SECTION ===================== -->
+<section class="bg-[#181818] py-10 md:py-16 border-b border-[#2a2a2a]">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+
+      <!-- Left: Info -->
+      <div class="order-2 md:order-1">
+        <!-- Badge -->
+        <div class="mb-3">
+          <span class="text-[10px] font-bold text-[#FF9549] border border-[#FF9549] rounded px-2 py-0.5 uppercase tracking-widest">Только в АВТОРУСЬ!</span>
+        </div>
+
+        <h2 class="font-heading text-4xl md:text-5xl text-white tracking-wide leading-none mb-2">TANK 300</h2>
+
+        <div class="mb-4">
+          <div class="text-[#aaa] text-xs uppercase tracking-wider mb-1">ВЫГОДА ПО TRADE-IN</div>
+          <div class="font-heading text-3xl md:text-4xl text-white">ДО 450 000 ₽</div>
+        </div>
+
+        <!-- Limited badge -->
+        <div class="mb-5 flex items-center gap-1 bg-red-600 w-[260px] text-[13px] rounded-xl p-1">
+          <img src="img/warning.svg" alt="Ограниченное предложение">
+            <a href="#">Ограниченное предложение</a>
+            <img src="img/warning.svg" alt="Ограниченное предложение">
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-col gap-3 max-w-xs">
+          <a href="#" class="bg-[#FF9549] hover:bg-[#e07a30] text-black font-bold text-sm text-center py-3 px-6 rounded transition-colors flex items-center justify-between">
+            Узнать стоимость по акции
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#" class="border border-[#444] hover:border-[#FF9549] text-white font-semibold text-sm text-center py-3 px-6 rounded transition-colors flex items-center justify-between">
+            Тест-драйв
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#" class="border border-[#444] hover:border-[#FF9549] text-white font-semibold text-sm text-center py-3 px-6 rounded transition-colors flex items-center justify-between">
+            Рассчитать кредит
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mini benefits -->
+        <div class="grid grid-cols-2 gap-3 mt-6 text-[10px] text-[#aaa]">
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Автомобили в наличии с ПТС
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Сервисная поддержка до 5 лет / 150 000 км
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Улучшим любое предложение
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Кредит 0.01%
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Car image + color selector -->
+      <div class="flex order-1 md:order-2 relative">
+        <!-- Sale badge -->
+        <img
+          src="./img/img.svg"
+          alt="Tank 300 Red"
+          class="w-full object-contain max-h-72 md:max-h-96"
+        />
+        <!-- Color dots -->
+        <div class="items-center gap-[40px] mt-6 justify-center md:justify-start">
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#c0392b;" title="Красный"></div>
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#e8d5b7;" title="Бежевый"></div>
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#888;" title="Серый"></div>
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#222;" title="Чёрный"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY SECTION ===================== -->
+<section class="bg-[#181818] py-8 border-b border-[#2a2a2a]">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <img class="hover:scale-105 transition-transform duration-300" src="img/image 285.svg" alt="">
+      <img class="hover:scale-105 transition-transform duration-300" src="img/image 286 (1).svg" alt="Tank 300 Exterior Front"/>
+      <img class="hover:scale-105 transition-transform duration-300" src="./img/image%20287.svg" alt="Tank 300 Exterior Side" />
+      <img class="hover:scale-105 transition-transform duration-300" src="./img/image%20288.svg" alt="Tank 300 Interior Dashboard"/>
+      <img class="hover:scale-105 transition-transform duration-300" src="./img/image%20289.svg" alt="Tank 300 Wheel"/>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TANK 500 PRODUCT SECTION ===================== -->
+<section class="bg-[#1e1e1e] py-10 md:py-16 border-b border-[#2a2a2a]">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+
+      <!-- Left: Car image -->
+      <div class="relative flex">
+        <!-- Sale badge -->
+        <div class="absolute top-3 right-3 z-10 bg-[#FF9549] text-black text-[9px] font-bold rounded px-2 py-1 text-center leading-tight -rotate-2">
+          Только<br/>5 авто<br/>по старой цене
+        </div>
+        
+        <!-- Color dots -->
+        <div class="items-center gap-[20px] mt-6 justify-center md:justify-start">
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#b8a070;" title="Золотой"></div>
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#e8d5b7;" title="Серебряный"></div>
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#444;" title="Тёмно-серый"></div>
+          <div class="hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-red-500 m-2 h-6 w-6 rounded-full color-dot" style="background:#222;" title="Чёрный"></div>
+        </div>
+        <img
+          src="./img/image%20286.svg"
+          alt="Tank 500 Gold"
+          class="w-full object-contain max-h-72 md:max-h-96"
+        />
+      </div>
+
+      <!-- Right: Info -->
+      <div>
+        <div class="mb-3">
+          <span class="text-[10px] font-bold text-[#FF9549] border border-[#FF9549] rounded px-2 py-0.5 uppercase tracking-widest">Только в АВТОРУСЬ!</span>
+        </div>
+
+        <h2 class="font-heading text-4xl md:text-5xl text-white tracking-wide leading-none mb-2">TANK 500</h2>
+
+        <div class="mb-4">
+          <div class="text-[#aaa] text-xs uppercase tracking-wider mb-1">ВЫГОДА ПО TRADE-IN</div>
+          <div class="font-heading text-3xl md:text-4xl text-white">ДО 550 000 ₽</div>
+        </div>
+
+        <!-- Limited badge -->
+        <div class="mb-5 flex items-center gap-1 bg-red-600 w-[260px] text-[13px] rounded-xl p-1">
+          <img src="img/warning.svg" alt="Ограниченное предложение">
+            <a href="#">Ограниченное предложение</a>
+            <img src="img/warning.svg" alt="Ограниченное предложение">
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-col gap-3 max-w-xs">
+          <a href="#" class="bg-[#FF9549] hover:bg-[#e07a30] text-black font-bold text-sm text-center py-3 px-6 rounded transition-colors flex items-center justify-between">
+            Узнать стоимость по акции
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#" class="border border-[#444] hover:border-[#FF9549] text-white font-semibold text-sm text-center py-3 px-6 rounded transition-colors flex items-center justify-between">
+            Тест-драйв
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="#" class="border border-[#444] hover:border-[#FF9549] text-white font-semibold text-sm text-center py-3 px-6 rounded transition-colors flex items-center justify-between">
+            Рассчитать кредит
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mini benefits -->
+        <div class="grid grid-cols-2 gap-3 mt-6 text-[10px] text-[#aaa]">
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Автомобили в наличии с ПТС
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Сервисная поддержка до 5 лет / 150 000 км
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Улучшим любое предложение
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#FF9549] shrink-0"></div>
+            Кредит 0.01%
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
