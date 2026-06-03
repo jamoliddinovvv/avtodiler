@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/svg" href="img/logo.445e7b59 1.svg">
+</head>
+<body class="bg-[#181818] min-h-screen flex items-center justify-center px-4">
+    <div class="relative bg-[#1C2121] w-[555px] max-w-full rounded-[32px] p-8 text-white shadow-[0_40px_70px_rgba(0,0,0,0.45)]">
+        <button type="button" class="absolute right-6 top-6">
+            <img src="img/x-close.svg" alt="close">
+        </button>
+        <div class="mx-auto max-w-[400px] text-center">
+            <h1 class="text-[28px] font-semibold uppercase tracking-[0.16em] mb-4">Получить предложение</h1>
+            <p class="text-sm leading-6 text-[#B1B1B1] mb-8">Пожалуйста, укажите свои данные.<br>Наш менеджер свяжется с вами в течение 15 минут.</p>
+        </div>
+
+        <form action="index.html" method="get" class="space-y-5">
+            <label class="block text-sm text-[#B1B1B1]">
+                Модель
+                <select class="mt-2 w-full rounded-[18px] border border-[#383F3F] bg-[#151A1A] p-4 text-white outline-none">
+                    <option value="" disabled selected>Выберите модель</option>
+                    <option>Танк 300</option>
+                    <option>Танк 500</option>
+                </select>
+            </label>
+
+            <label class="block text-sm text-[#B1B1B1]">
+                Телефон
+                <input type="tel" placeholder="+7 (___) ___-__-__" class="mt-2 w-full rounded-[18px] border border-[#383F3F] bg-[#151A1A] p-4 text-white outline-none" />
+            </label>
+
+            <button type="submit" class="w-full rounded-[18px] bg-[#FF8C3F] py-4 text-sm font-semibold text-[#181818]">Получить предложение</button>
+
+            <label class="flex items-start gap-3 text-sm text-[#B1B1B1]">
+                <input type="checkbox" class="mt-1 h-4 w-4 rounded border-[#383F3F] bg-[#151A1A] text-[#FF8C3F]" />
+                <span>Согласен на обработку персональных данных.</span>
+            </label>
+        </form>
+    </div>
+</body>
+</html>
