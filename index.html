@@ -410,5 +410,799 @@
   </div>
 </section>
 
+<!-- SHAMSIDDIN -->
+<!-- ABDULAZIZ -->
+
+<style>
+    :root {
+      --bg: #070707;
+      --fg: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #f97316;
+      --accent-2: #86efac;
+      --card-radius: 20px;
+      --card-img-w: 300px;
+      --card-img-h: 200px;
+      --gallery-h: 160px;
+      --btn-h: 44px;
+      color-scheme: dark;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #060707;
+      color: #f8fafc;
+    }
+
+    .page {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 1fr);
+      gap: 30px;
+      align-items: center;
+      padding: 36px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      background-image: url('');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(255, 165, 0, 0.20), transparent 24%), radial-gradient(circle at 80% 30%, rgba(255, 140, 0, 0.18), transparent 26%);
+      pointer-events: none;
+    }
+
+    .hero-content,
+    .hero-panel {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      margin: 0 0 18px;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      color: #fff;
+    }
+
+    .hero-subtitle {
+      margin: 0 0 26px;
+      max-width: 580px;
+      color: rgba(226, 232, 240, 0.88);
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      background: rgba(248, 113, 113, 0.12);
+      color: #fecaca;
+      padding: 0.9rem 1.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .button-primary,
+    .button-secondary {
+      border: none;
+      border-radius: 999px;
+      padding: 0.95rem 1.6rem;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.97rem;
+    }
+
+    .button-primary {
+      background: #f97316;
+      color: #070707;
+    }
+
+    .button-primary:hover {
+      background: #ea580c;
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 24px;
+      background: rgba(2, 58, 188, 0.84);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-meta-item span {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(249, 115, 22, 0.14);
+      color: #fb923c;
+      font-size: 0.95rem;
+    }
+
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(31, 41, 55, 0.24);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: var(--gallery-h);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 420px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 28px;
+      box-shadow: 0 40px 90px rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .section-title {
+      margin: 60px 0 24px;
+      font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #f8fafc;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .select {
+      flex: 1 1 220px;
+      min-width: 220px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(15, 23, 42, 0.82);
+      color: #f8fafc;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .car-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .car-card {
+      display: grid;
+      grid-template-columns: var(--card-img-w) 1fr;
+      gap: 20px;
+      padding: 20px;
+      border-radius: var(--card-radius);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.08);
+      align-items: center;
+    }
+
+    .car-card img {
+      width: var(--card-img-w);
+      height: var(--card-img-h);
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .icon {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .car-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .car-card-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .car-card-meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .car-card-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f97316;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #86efac;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button-outline,
+    .button-warning,
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      height: var(--btn-h);
+      padding: 0 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .button-outline {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .button-warning {
+      background: var(--accent);
+      color: #070707;
+      border: none;
+    }
+
+    .button-warning:hover {
+      background: #f97316;
+    }
+
+    .note-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    .note-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.6rem 0.9rem;
+      border-radius: 14px;
+      font-size: 0.92rem;
+    }
+
+    .icon svg { width: 16px; height: 16px; display: block; }
+
+    .tradein {
+      display: grid;
+      grid-template-columns: 1fr minmax(320px, 420px);
+      gap: 26px;
+      margin-top: 48px;
+      padding: 26px;
+      border-radius: 32px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      align-items: center;
+    }
+
+    .tradein img {
+      width: 100%;
+      border-radius: 28px;
+      object-fit: cover;
+      min-height: 320px;
+    }
+
+
+    .tradein-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tradein-text h2 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.05;
+    }
+
+    .tradein-text p {
+      margin: 0;
+      color: #cbd5e1;
+      line-height: 1.9;
+    }
+
+    .tradein-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .link-button {
+      padding: 0.95rem 1.55rem;
+      border-radius: 999px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+    .link-primary {
+      background: #f97316;
+      color: #070707;
+    }
+
+    .link-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .tradein,
+      .car-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image,
+      .hero-meta,
+      .tradein-text {
+        align-items: stretch;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 14px 30px;
+      }
+
+      .hero {
+        padding: 24px;
+        gap: 20px;
+      }
+
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .car-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-content">
+        
+        <div class="hero-badge">Только в Авторус</div>
+        <h1 class="hero-title">TANK 500 — вигода до 700 000 ₽</h1>
+        <p class="hero-subtitle">Готовы подобрать лучшую комплектацию и оформить покупку с выгодой. Онлайн-показ, кредитные условия и выгодный Trade-In прямо сейчас.</p>
+        <div class="hero-buttons">
+          <button class="button-primary">Узнать стоимость на заказ</button>
+          <button class="button-secondary">Рассчитать кредит</button>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item"><span>1</span>Автомобиль в наличии</div>
+          <div class="hero-meta-item"><span>2</span>Сервисная поддержка до 5 лет / 150 000 км</div>
+          <div class="hero-meta-item"><span>3</span>Выгодные условия по Trade-In</div>
+        </div>
+        <div class="hero-gallery">
+          <div class="gallery-item"><img src="/3.png" alt="TANK 500 front view" /></div>
+          <div class="gallery-item"><img src="/4.png" alt="TANK 500 side" /></div>
+          <div class="gallery-item"><img src="/5.png" alt="TANK 500 rear view" /></div>
+          <div class="gallery-item"><img src="/6.png" alt="TANK 500 interior" /></div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/8.png" alt="TANK 500 на дороге" />
+      </div>
+    </section>
+
+    <h2 class="section-title">Подберите комплектацию</h2>
+    <div class="filters">
+      <select class="select"><option>Марка</option><option>TANK 500</option><option>TANK 300</option></select>
+      <select class="select"><option>Тип кузова</option><option>Внедорожник</option><option>Кроссовер</option></select>
+      <select class="select"><option>Двигатель</option><option>2.0L Бензин</option><option>3.0L Бензин</option></select>
+    </div>
+
+
+    <div class="car-list">
+      <article class="car-card">
+        <img src="/9.png" alt="TANK 300 белый" />
+        <div class="car-card-body">
+          <div>
+            <h3 class="car-card-title">TANK 300</h3>
+            <div class="car-card-meta">2.0L Бензин · Передний привод · Автомат</div>
+          </div>
+          <div class="car-card-price">3 649 000 ₽</div>
+          <div class="note-row">
+            <span>Выгода по Trade-In до 450 000 ₽</span>
+            <span>Керамическое покрытие в подарок</span>
+          </div>
+          <div class="card-actions">
+            <button class="button-warning"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M2 12h20" stroke="#070707" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 6h20" stroke="#070707" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/></svg></span>Получить предложение</button>
+            <button class="button-outline"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="12" cy="12" r="9" stroke="#f8fafc" stroke-width="1.4"/><path d="M7 12h10" stroke="#f8fafc" stroke-width="1.4" stroke-linecap="round"/></svg></span>Тест-драйв</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="car-card">
+        <img src="/10.png" alt="TANK 300 серебристый" />
+        <div class="car-card-body">
+          <div>
+            <h3 class="car-card-title">TANK 300</h3>
+            <div class="car-card-meta">2.0L Бензин · Полный привод · Автомат</div>
+          </div>
+          <div class="car-card-price">3 649 000 ₽</div>
+          <div class="note-row">
+            <span><svg class="icon" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="#86efac" stroke-width="1.2" fill="rgba(16,185,129,0.06)"/><path d="M6.5 10.5l1.8 1.8L13.5 7" stroke="#86efac" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгода по Trade-In до 450 000 ₽</span>
+            <span><svg class="icon" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="#86efac" stroke-width="1.2" fill="rgba(16,185,129,0.06)"/><path d="M6.5 10.5l1.8 1.8L13.5 7" stroke="#86efac" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Керамическое покрытие в подарок</span>
+          </div>
+          <div class="card-actions">
+            <button class="button-warning"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M2 12h20" stroke="#070707" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 6h20" stroke="#070707" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/></svg></span>Получить предложение</button>
+            <button class="button-outline"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="12" cy="12" r="9" stroke="#f8fafc" stroke-width="1.4"/><path d="M7 12h10" stroke="#f8fafc" stroke-width="1.4" stroke-linecap="round"/></svg></span>Тест-драйв</button>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="car-card">
+        <img src="/11.png" alt="TANK 300 черный" />
+        <div class="car-card-body">
+          <div>
+            <h3 class="car-card-title">TANK 300</h3>
+            <div class="car-card-meta">2.0L Бензин · Полный привод · Автомат</div>
+          </div>
+          <div class="car-card-price">3 649 000 ₽</div>
+          <div class="note-row">
+            <span><svg class="icon" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="#86efac" stroke-width="1.2" fill="rgba(16,185,129,0.06)"/><path d="M6.5 10.5l1.8 1.8L13.5 7" stroke="#86efac" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгода по Trade-In до 450 000 ₽</span>
+            <span><svg class="icon" viewBox="0 0 20 20" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="#86efac" stroke-width="1.2" fill="rgba(16,185,129,0.06)"/><path d="M6.5 10.5l1.8 1.8L13.5 7" stroke="#86efac" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Керамическое покрытие в подарок</span>
+          </div>
+          <div class="card-actions">
+            <button class="button-warning"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M2 12h20" stroke="#070707" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 6h20" stroke="#070707" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/></svg></span>Получить предложение</button>
+            <button class="button-outline"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="12" cy="12" r="9" stroke="#f8fafc" stroke-width="1.4"/><path d="M7 12h10" stroke="#f8fafc" stroke-width="1.4" stroke-linecap="round"/></svg></span>Тест-драйв</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <section class="tradein">
+      <img src="/7.png" alt="Trade-in" />
+      <div class="tradein-text">
+        <h2>Обмен по Trade-In на выгодных условиях</h2>
+        <p>Оставьте заявку на обмен старого автомобиля и получите скидку на новую модель TANK. Быстрые решения, удобная оценка и профессиональная поддержка на каждом этапе.</p>
+        <div class="tradein-links">
+          <button class="link-primary">Отправить заявку</button>
+          <button class="link-secondary">Узнать больше</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+  <script>
+
+    (function(){
+      const fallbackMap = [
+        {regex: /tank500/i, src: ''},
+        {regex: /tank300/i, src: ''},
+        {regex: /tradein/i, src: ''}
+      ];
+
+      function getFallback(srcName){
+        for(const m of fallbackMap){
+          if(m.regex.test(srcName)) return m.src;
+        }
+        return 'https://via.placeholder.com/300x200?text=No+Image';
+      }
+
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function onErr(){
+          const name = (img.getAttribute('src') || '').split('/').pop() || '';
+          const fallback = getFallback(name);
+          if(img.src !== fallback){ img.src = fallback; }
+          img.removeEventListener('error', onErr);
+        });
+      });
+    })();
+  </script>
+</html>
+</html>
+
+<body class="bg-[#0d0d0d] text-white">
+
+    <!-- HERO -->
+    <section class="relative h-[450px] overflow-hidden">
+        <img
+            src="1.png"
+            class="absolute inset-0 w-full h-full object-cover"
+            alt=""
+        >
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative max-w-6xl mx-auto px-8 pt-24">
+            <h1 class="text-5xl font-bold uppercase leading-tight max-w-xl">
+                Оставьте заявку
+                <br>
+                на кредит
+            </h1>
+
+            <p class="mt-4 text-gray-300">
+                и получите одобрение за 1 день
+            </p>
+
+            <div class="flex mt-8 max-w-lg">
+                <input
+                    type="text"
+                    placeholder="+7(___) ___-__-__"
+                    class="flex-1 bg-[#1a1a1a] border border-gray-700 px-5 py-4 rounded-l-lg outline-none"
+                >
+
+                <button class="bg-orange-500 hover:bg-orange-600 px-8 rounded-r-lg font-semibold">
+                    Отправить заявку →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPORATE -->
+    <section class="py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-[#10181d] rounded-xl p-10 flex justify-between items-center">
+
+                <div>
+                    <h2 class="text-3xl font-bold uppercase">
+                        Индивидуальное предложение
+                        <br>
+                        для корпоративных клиентов
+                    </h2>
+
+                    <button class="mt-8 bg-orange-500 px-6 py-3 rounded-lg">
+                        Отправить заявку →
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <img
+                        src="2.png"
+                        class="w-24 h-24 rounded-full object-cover"
+                        alt=""
+                    >
+
+                    <div>
+                        <h3 class="font-bold text-xl">
+                            Татьяна Санникова
+                        </h3>
+
+                        <p class="text-gray-400 text-sm">
+                            Отдел корпоративных продаж
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="pb-16">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <div class="relative rounded-xl overflow-hidden">
+
+                
+                 <iframe
+    class="w-full h-[420px]"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=69.2163%2C41.2995%2C69.3163%2C41.3495&layer=mapnik"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+                >
+
+                <div class="absolute bottom-0 left-0 right-0 bg-[#111] p-8">
+
+                    <div class="grid md:grid-cols-4 gap-6 items-center">
+
+                        <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                                Адрес
+                            </p>
+
+                            <p>
+                                Ярославское шоссе,
+                                владение 2 В
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                                Телефон
+                            </p>
+
+                            <p>
+                                +7 (999) 999-99-99
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="text-gray-400 text-sm mb-2">
+                                Режим работы
+                            </p>
+
+                            <p>
+                                Ежедневно
+                                <br>
+                                09:00 – 21:00
+                            </p>
+                        </div>
+
+
+                        <div class="text-right">
+                            <button class="bg-orange-500 px-6 py-3 rounded-lg">
+                                Заказать звонок →
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="pb-16">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <h3 class="text-xl font-semibold mb-6">
+                Дисклеймер
+            </h3>
+
+            <p class="text-gray-500 text-sm leading-7">
+                Текст дисклеймера. Здесь размещается информация
+                о кредитных условиях, специальных предложениях
+                и прочие юридические сведения.
+            </p>
+
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 py-10">
+
+            <div class="flex flex-col md:flex-row justify-between gap-10">
+
+                <div>
+                    <h3 class="font-bold text-xl">
+                        АВТОРУСЬ TANK
+                    </h3>
+
+                    <p class="text-gray-500 mt-3">
+                        Ярославское шоссе, владение 2 В
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-2xl font-bold">
+                        +7 (999) 999-99-99
+                    </p>
+
+                    <button class="mt-4 bg-orange-500 px-6 py-3 rounded-lg">
+                        Заказать звонок
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-10 pt-6 text-gray-500 text-sm flex justify-between">
+                <p>© 2024 АВТОРУСЬ TANK</p>
+                <p>Правовая информация</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
 </body>
 </html>
